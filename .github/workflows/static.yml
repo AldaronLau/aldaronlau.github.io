@@ -37,8 +37,8 @@ jobs:
         uses: taiki-e/install-action@v2
         with:
           tools: cargo-daku, wasm-bindgen-cli
-        run: cargo daku
-        run: sh post-process.sh
+      - run: cargo daku
+      - run: sh post-process.sh
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:

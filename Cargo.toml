@@ -4,7 +4,7 @@ edition = "2021"
 
 [dependencies]
 async_main = { version = "0.4.0", features = ["pasts"] }
-marksad = "0.1.1"
+marksad = "0.1.2"
 fetchy = { version = "0.2.2", features = ["web"] }
 pasts = "0.14.3"
 

@@ -30,13 +30,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: taiki-e/checkout-action@v1
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install Dependencies
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-daku, wasm-bindgen-cli
+      - run: rustup target add wasm32-unknown-unknown
       - run: cargo daku
       - run: sh post-process.sh
       - name: Upload Artifact

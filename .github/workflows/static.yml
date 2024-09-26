@@ -36,7 +36,7 @@ jobs:
       - name: Install Dependencies
         uses: taiki-e/install-action@v2
         with:
-          tool: cargo-daku, wasm-bindgen-cli
+          tool: cargo-daku, wasm-bindgen-cli, wasm-snip, wasm-opt
       - run: rustup target add wasm32-unknown-unknown
       - run: cargo daku
       - run: sh post-process.sh

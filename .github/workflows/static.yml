@@ -37,7 +37,7 @@ jobs:
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-daku, wasm-bindgen-cli, wasm-snip, wasm-opt
-      - run: apt install wabt
+      - run: sudo apt install wabt
       - run: rustup target add wasm32-unknown-unknown
       - run: cargo daku
       - run: sh post-process.sh
